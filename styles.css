@@ -1,0 +1,463 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Inter, Helvetica, Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    font-size: 2.3dvw;
+}
+
+/******************** Navigation Bar *************************/
+
+header {
+    position: fixed;
+    background-color: #fff;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    margin: -30px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-line {
+    height: 3px;
+    background-color: #113e21;
+    width: 100%;
+    margin-top: 7.3px;
+    margin-bottom: 10px;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.links {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+
+.links li {
+    margin-top: 25px;
+    margin-right: 20px;
+}
+
+.links a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, #b38b59, #b38b59 50%, #113e21 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    transition: all 0.3s ease-in-out;
+    color: #113e21;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}
+
+.links a:before {
+    content: "";
+    width: 0;
+    height: 3px;
+    bottom: 5px;
+    left: 0;
+    bottom: -3px;
+    z-index: 0;
+    position: absolute;
+    background: #b38b59;
+    transition: all 0.3s ease-in-out;
+}
+
+.links a:hover {
+    background-position: 0%;
+    color: #b38b59;
+}
+
+.links a:hover:before {
+    width: 100%;
+}
+
+.links a.active {
+    background-position: 0%;
+    color: #b38b59;
+}
+
+.toggle_btn {
+    display: none;
+    cursor: pointer;
+    color: #fff;
+    margin-bottom: 0px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.toggle_btn:hover {
+    scale: 1.30;
+    color: #b38b59;
+}
+
+.toggle_btn.clicked {
+    color: #b38b59;
+}
+
+.action_btn {
+    background-color: #113e21;
+    color: #f0f0f0;
+    padding: 0.5rem 1rem;
+    text-wrap: nowrap;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+    margin-bottom: 0px;
+    margin-right: 20px;
+}
+
+.action_btn:hover {
+    scale: 1.05;
+    background-color: #b38b59;
+    color: #f0f0f0;
+}
+
+.action_btn:active {
+    scale: 0.95;
+}
+
+/******************** Other Contents *************************/
+
+.container {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+    width: 0 auto;
+    margin: 0 auto;
+}
+
+.container1 {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+    width: 70dvw;
+    margin: 0 auto;
+}
+
+.container #about {
+    background-color: #113e21;
+    padding: 10px;
+    border-radius: 8px;
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+    width: 0 auto;
+    margin: 0 auto;
+}
+
+.container1 #about {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+    width: 100%;
+    height: 75%;
+    margin: 0 auto;
+}
+
+.container #contact {
+    background-color: #113e21;
+    padding: 10px;
+    border-radius: 8px;
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+    width: 0 auto;
+    margin: 0 auto;
+}
+
+.container1 #contact {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.container2 {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+    width: 47dvw;
+    margin: 0 auto;
+}
+
+#projects {
+    height: 100vh;
+    padding: 20px;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+#intro{
+    height: 100vh;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    align-content: center;
+}
+#about, #contact {
+    height: 50vh;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    align-content: center;
+}
+
+#intro ul {
+    list-style: none;
+}
+
+#intro li {
+    font-size: px;   
+    margin-bottom: 10px;
+}
+
+#intro span {
+    font-weight: bold;
+    color: #113e21;
+}
+
+#intro h1 {
+    margin-top: 15cqw;   
+    font-size: 6cqw;   
+    color: #616161;
+}
+
+#projects h1 {
+    margin-top: 20cqw;   
+    color: #b38b59;
+}
+
+#about h1{
+    margin-top: 9cqw;   
+    color: #b38b59;
+}
+
+#contact h1 {
+    margin-top: 20cqw;   
+    color: #b38b59;
+}
+
+#projects ul,
+#about ul,
+#contact p {
+    font-style: italic;
+    list-style: none;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Media Query for small screens */
+@media (max-width: 750px) {
+    .links {
+        list-style: none;
+        display: flex;
+        margin-left: auto;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: -100%;
+        background-color: #f0f0f0;
+        box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.1);
+        width: 75%;
+        height: 200px;
+        transition: right 0.3s ease-in-out;
+    }
+
+    body.nav-links-visible .links {
+        right: 0;
+    }
+
+    .toggle_btn {
+        display: block;
+        font-size: 1.5rem;
+        color: #113e21;
+    }
+}
+
+/********* About me *********/
+/* General styling for the components */
+#about {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    width: 70dvw;
+    margin: 0 auto;
+    display: flex; 
+    align-items: self-start;  
+}
+
+h1 {
+    margin: auto;
+    margin-top: -100px;
+}
+
+h3 {
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.aff {
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: -0px;
+}
+
+/* Style for the icon and text container */
+.edu-info-container {
+    display: flex;
+    align-items: center;  
+    margin-bottom: 10px;
+}
+
+/* Style for the icon */
+.edu-icon {
+    width: 70px;  
+    height: 70px;  
+    margin-right: 30px;  
+}
+
+.baste {
+    width: 80px;  
+    height: 80px;  
+}
+
+.jpcs {
+    width: 150px;  
+    height: 150px;  
+    margin-bottom: -30px;
+}
+
+.item-header {
+    flex: 1;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.date {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.subtitle {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.bullets {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.bullet {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+/********* Connect *********/
+
+/* Additional styles for contact icons */
+#contact h1{
+    display: flex;
+    margin-top: 40px;
+}
+
+ul.contact-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 150px;
+}
+
+ul.contact-icons li {
+    margin: 0 15px;
+    
+}
+
+ul.contact-icons a {
+    display: block;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 63px;
+    background: #113e21;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #f0f0f0;
+    transition: .5s;
+    text-decoration: none;
+    
+}
+
+ul.contact-icons a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #05702b;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+}
+
+ul.contact-icons a:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #05702b;
+}
+
+ul.contact-icons a:hover {
+    color: #e4983b;
+    box-shadow: 0 0 10px #e4983b;
+}
